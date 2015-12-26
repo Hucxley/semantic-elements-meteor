@@ -3,12 +3,20 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <div class="ui text container">
+    <h1>Welcome to Meteor!</h1>
 
-  {{> hello}}
+    {{> hello}}
+  </div>
 </body>
 
 <template name="hello">
-  <button>Click Me</button>
+  <button class="ui green button">Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
+  <div class="ui teal progress" data-value="{{counter}}" data-total="100" id="progressBar">
+    <div class="bar">
+      <div class="progress"></div>
+    </div>
+    <div class="label">{{counter}}/100 clicks!</div>
+  </div>
 </template>
